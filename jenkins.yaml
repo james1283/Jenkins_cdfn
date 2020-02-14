@@ -10,41 +10,41 @@ Parameters:
   Urlname:
     Description: Will be the first portion of the URL for your jenkins server
     Type: String
-    Default: Replaceme
+    Default: jenkins
     ConstraintDescription: Must be a string.
   AmiId:
     Type: String
-    Description: Specifies the AMI ID, using newest linux for us-east-1
-    Default: ami-0ff8a91507f77f867
+    Description: Specifies the AMI ID, using newest linux for ap-southeast-2
+    Default: ami-0b8b10b5bf11f3a22
   InstanceType:
     Type: String
     Description: >
-      Specifies the EC2 instance type for jenkins, which is memory intensive usually
+      Specifies the EC2 instance type for jenkins, which is usually memory intensive
       Defaults to m4.large
     Default: m5.large
     ConstraintDescription: must be a valid EC2 instance type.
   InstanceProfile:
     Type: String
     Description: Specifies Instance profile for the box (Needs S3 write access to new bucket)
-    Default: Replaceme
+    Default: JenkinsDeploy-EC2-Instance-Profile
   KeyName:
     Type: String
     Description: >
       Optional - Specifies the name of an existing Amazon EC2 key pair
       to enable SSH access to the EC2 instances in your cluster.
-    Default: Replaceme
+    Default: thl-infra-prod
   BucketName:
     Type: String
     Description: Name of s3 Backup bucket to load your jenkins content
-    Default: my-jenkins-backup
+    Default: thl-jenkins-backup-bucket
   HostedZoneId:
     Type: String
     Description: ID of your hosted zone
-    Default: Replaceme
+    Default: Z1XQAQI478P7BG
   RootDomain:
     Type: String
     Description: Name of your hosted zone
-    Default: Replaceme.com.
+    Default: mighty-usa.com.
     
 Resources:
 
